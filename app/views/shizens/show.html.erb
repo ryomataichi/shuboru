@@ -14,11 +14,10 @@
 
 <div class="shizen">
 <div class="shizens-container">
-<% if @shizen.image? %>
         <%= image_tag @shizen.image.url,style: "border-radius: 0%; width: 360px; height: 480px; object-fit:cover;" if @shizen.image? %>
         <%= image_tag @shizen.yokogazou.url,style: "border-radius: 0%; width: 640px; height: 480px; object-fit:cover;" if @shizen.yokogazou? %>
         <%= image_tag @shizen.tategazou2.url,style: "border-radius: 0%; width: 360px; height: 480px; object-fit:cover;" if @shizen.tategazou2? %>
-        <%= image_tag @shizen.yokogazou2.url,style: "border-radius: 0%; width: 640px; height: 480px; object-fit:cover;" if @shizen.yokogazou2? %><% end %>
+        <%= image_tag @shizen.yokogazou2.url,style: "border-radius: 0%; width: 640px; height: 480px; object-fit:cover;" if @shizen.yokogazou2? %>
 </div>
 <% if user_signed_in? %>
                 <% if current_user.already_liked?(@shizen) %>
