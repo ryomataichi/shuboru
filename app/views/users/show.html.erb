@@ -1,7 +1,5 @@
 <% if @user.image.attached? %>
 <%= image_tag  @user.image,style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;" %>
-<% else %>
-<%= image_tag "default.png", style: "border-radius: 50%; width: 100px; height: 100px; object-fit:cover;" %>
 <% end %>
 
 <div class="namae">
