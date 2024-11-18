@@ -21,7 +21,7 @@
             <%= image_tag t.image.url,style: "border-radius: 0%; width: 240px; height: 320px; object-fit:cover;" if t.image? %>
         <% end %>
     <br>
-    <%= t.spot_name %>
+    <%= link_to t.spot_name, shizen_path(t.id) %>
     <%= t.ken %>
     <br>
     <p><%= link_to "グーグルマップ", t.maplink if t.maplink? %></p>

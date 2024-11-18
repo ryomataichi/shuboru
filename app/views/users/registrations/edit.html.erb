@@ -1,3 +1,4 @@
+<div class="edit_container">
 <div class="edit">
 <h3>プロフィールを編集する</h3>
 
@@ -31,12 +32,9 @@
     <%= f.label :新しいパスワードをもう一度入力してください %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     <br>
-    <%= f.label :現在のパスワード %>
-    
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  <div class="actions">
-    <%= f.submit "更新" %>
-  </div>
+  <%= f.label :現在のパスワードを入力してから更新ボタンを押してください！%>
+  <%= f.password_field :current_password, autocomplete: "current-password" %>
+  <%= f.submit "更新" %>
 <% end %>
 <div class="migisoroe">
 <%= link_to "戻る", :back %>
@@ -44,4 +42,6 @@
 <br>
 <div class="migisoroe">
 <%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+</div>
+</div>
 </div>
