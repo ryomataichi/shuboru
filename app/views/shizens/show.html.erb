@@ -36,7 +36,7 @@
 </div>
 <p><%= @shizen.ken %></p>
 <p><%= link_to "グーグルマップ", @shizen.maplink if @shizen.maplink? %></p>
-<p><%= link_to @shizen.user.name, user_path(@shizen.user.id) %>
+<p><%= link_to @shizen.user.name, user_path(@shizen.user.id) %></p>
 <p><%= @shizen.setumei %></p>
 <br>
 <% if user_signed_in? && current_user.id == @shizen.user_id %>
