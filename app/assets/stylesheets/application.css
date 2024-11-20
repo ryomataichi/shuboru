@@ -60,10 +60,10 @@ header li {
 }
 
 .usershizen{
+    overflow-y: hidden;
     max-width: 150px;
     max-height: 330px;
     display:grid
-    overflow-y: hidden;
 }
 .comment-wrapper{
     overflow-y: scroll;
