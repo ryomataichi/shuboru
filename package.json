@@ -21,7 +21,7 @@
     "webpack-dev-server": "3"
   },
   "engines": {
-    "node": "16.14.0",
-    "npm": "8.3.1"
+    "node": "16.20.0",
+    "npm": "8.19.4"
   }
 }
