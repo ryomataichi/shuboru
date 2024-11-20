@@ -4,3 +4,17 @@
 a {
     color: red; 
 }
+.shizen{
+    max-width: 240px;
+    max-height: 470px;
+}
+
+.shizens-container{
+    margin-top: 2%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    gap: 5px;
+    background: white;
+    border: solid 1px white;
+}

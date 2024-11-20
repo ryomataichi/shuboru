@@ -48,19 +48,10 @@ header li {
     list-style: none;
     margin-right: 40px;
 }
-.shizens-container{
-    margin-top: 2%;
-    overflow-x: auto;
-    max-width: 100%;
-    display: flex;
-    gap: 1px;
-    background: white;
-    border: solid 1px white;
-}
-
 
 .usershizens-container{
     overflow-x: scroll;
+    overflow-y: hidden;
     max-width: 100%;
     display: flex;
     gap: 1px;
@@ -69,11 +60,11 @@ header li {
 }
 
 .usershizen{
-    max-width: 33%;
+    max-width: 150px;
+    max-height: 330px;
     display:grid
-    
+    overflow-y: hidden;
 }
-
 .comment-wrapper{
     overflow-y: scroll;
     max-width: 100%;

@@ -12,9 +12,8 @@
 <%= link_to '新しい順', shizens_path(new:"new")%> | 
 <%= link_to '古い順', shizens_path(old:"old")%> | 
 <%= link_to '評価の高い順', shizens_path(good:"good")%>
-
 <main>
-    <div class="shizens-container">
+<div class="shizens-container">
     <% @shizens.each do |t| %>
     <div class="shizen">
         <%= link_to shizen_path(t.id) do %> 
@@ -22,27 +21,27 @@
         <% end %>
     <br>
     <%= link_to t.spot_name, shizen_path(t.id) %>
+    <br>
+    <% if user_signed_in? %>
+        <% if current_user.already_liked?(t) %>
+        <%= link_to shizen_like_path(id: t.id, shizen_id: t.id), method: :delete do %>
+        <i class="fas fa-heart"></i><%= t.likes.count %>    
+        <% end %>
+        <% else %>
+        <%= link_to shizen_likes_path(id: t.id, shizen_id: t.id), method: :post do %>
+        <i class="fa-regular fa-heart"></i><%= t.likes.count %>
+        <% end %>
+    <% end %>
+    <% else %>
+        <i class="fa-regular fa-heart"></i><%= t.likes.count %>
+    <% end %>
+    <br>
     <%= t.ken %>
     <br>
     <p><%= link_to "グーグルマップ", t.maplink if t.maplink? %></p>
     <p><%= link_to t.user.name, user_path(t.user.id) %>
     <br>
     <%= t.setumei %>
-    <br>
-    <% if user_signed_in? %>
-        <% if current_user.already_liked?(t) %>
-        <%= link_to shizen_like_path(id: t.id, shizen_id: t.id), method: :delete do %>
-        <i class="fas fa-heart"></i><%= t.likes.count %>
-        
-        <% end %>
-        <% else %>
-        <%= link_to shizen_likes_path(id: t.id, shizen_id: t.id), method: :post do %>
-        <i class="fa-regular fa-heart"></i><%= t.likes.count %>
-        
-        <% end %>
-    <% end %>
-    <% else %>
-    <i class="fa-regular fa-heart"></i><%= t.likes.count %>
-    <% end %>
     </div>
 <% end %>
+</div>
