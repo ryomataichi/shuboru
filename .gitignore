@@ -38,4 +38,8 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+CLOUD_NAME= dhs4h0tuw  
+CLOUDINARY_API_KEY=733434377445398 
+CLOUDINARY_API_SECRET=MwI4j2lvwzJ0Qvu8yeZR4fc_jqI
 /.env
